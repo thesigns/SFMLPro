@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SFMLPro", "SFMLPro\SFMLPro.csproj", "{6BA1B5F1-7E79-4C72-B1FA-276F6543685C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SFMLProTest", "SFMLProTest\SFMLProTest.csproj", "{3B444CDF-FBCB-4FC1-8F65-2D17651CB0FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BA1B5F1-7E79-4C72-B1FA-276F6543685C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BA1B5F1-7E79-4C72-B1FA-276F6543685C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BA1B5F1-7E79-4C72-B1FA-276F6543685C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BA1B5F1-7E79-4C72-B1FA-276F6543685C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B444CDF-FBCB-4FC1-8F65-2D17651CB0FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B444CDF-FBCB-4FC1-8F65-2D17651CB0FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B444CDF-FBCB-4FC1-8F65-2D17651CB0FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B444CDF-FBCB-4FC1-8F65-2D17651CB0FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3FEFBF49-1A37-4723-A7A8-1FFD32F5C67E}
+	EndGlobalSection
+EndGlobal
