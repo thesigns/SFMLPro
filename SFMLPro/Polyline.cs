@@ -8,33 +8,19 @@ using System.Threading.Tasks;
 
 namespace SFMLPro {
 
-    public class Polyline : Transformable, Drawable {
-
-        public enum Linecap {
-            Butt,
-            Round,
-            Square
-        }
-
-        public Linecap StrokeCap { get; set; }
-        public float StrokeWidth { get; set; }
-        public Color StrokeColor { get; set; }
+    public class Polyline : Drawable {
 
         private List<Vertex> _vertices = new();
-        private List<float> _verticeWidths = new();
+        private List<float> _widths = new();
         private VertexArray _triangles = new(PrimitiveType.Triangles);
 
-        public Vector2f Center = new();
-
-
         public Polyline() {
-
         }
 
         public void AddVertex(Vertex vertex, float width = 1) {
 
             _vertices.Add(vertex);
-            _verticeWidths.Add(width);
+            _widths.Add(width);
             _triangles.Resize((uint)_vertices.Count * 12);
 
             if (_vertices.Count < 2) {
@@ -52,8 +38,8 @@ namespace SFMLPro {
                 var dist = MathF.Sqrt(dx * dx + dy * dy);
                 dx /= dist;
                 dy /= dist;
-                var halfStroke1 = _verticeWidths[i] / 2;
-                var halfStroke2 = _verticeWidths[i + 1] / 2;
+                var halfStroke1 = _widths[i] / 2;
+                var halfStroke2 = _widths[i + 1] / 2;
                 var x1b = x1a + halfStroke1 * dy;
                 var y1b = y1a - halfStroke1 * dx;
                 var x1c = x1a - halfStroke1 * dy;
@@ -136,8 +122,7 @@ namespace SFMLPro {
         }
 
         public void Draw(RenderTarget target, RenderStates states) {
-
-            target.Draw(_triangles);
+            target.Draw(_triangles, states);
         }
 
 

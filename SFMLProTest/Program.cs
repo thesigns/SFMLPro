@@ -22,20 +22,39 @@ namespace SFMLProTest {
 
             window.Closed += (sender, args) => window.Close();
 
-            Polyline line = new Polyline();
-            line.StrokeWidth = 5.5f;
+            Polyline line1 = new Polyline();
+            Polyline line2 = new Polyline();
+            Polyline line3 = new Polyline();
 
-            line.AddVertex(new Vertex(new Vector2f(100, 44), Color.Cyan), 1);
-            line.AddVertex(new Vertex(new Vector2f(33, 100), Color.Red), 2);
-            line.AddVertex(new Vertex(new Vector2f(200, 78), Color.Yellow), 3);
-            line.AddVertex(new Vertex(new Vector2f(100, 200), Color.Green), 4);
-            line.AddVertex(new Vertex(new Vector2f(400, 400), Color.White), 8);
+            line1.AddVertex(new Vertex(new Vector2f(100, 44), Color.Cyan), 0.5f);
+            line1.AddVertex(new Vertex(new Vector2f(33, 100), Color.Red), 1);
+            line1.AddVertex(new Vertex(new Vector2f(200, 78), Color.Yellow), 2);
+            line1.AddVertex(new Vertex(new Vector2f(100, 200), Color.Green), 4);
+            line1.AddVertex(new Vertex(new Vector2f(400, 400), Color.White), 8);
+            
+            line2.AddVertex(new Vertex(new Vector2f(500, 500), Color.Red), 16);
+            line2.AddVertex(new Vertex(new Vector2f(520, 480), Color.Red), 16);
+            line2.AddVertex(new Vertex(new Vector2f(480, 460), Color.Red), 16);
+            line2.AddVertex(new Vertex(new Vector2f(520, 440), Color.Red), 16);
+            line2.AddVertex(new Vertex(new Vector2f(480, 420), Color.Red), 16);
+            line2.AddVertex(new Vertex(new Vector2f(520, 400), Color.Red), 16);
+            
+            line3.AddVertex(new Vertex(new Vector2f(400, 200), Color.Blue), 10);
+            line3.AddVertex(new Vertex(new Vector2f(500, 200), Color.Blue), 10);
+            line3.AddVertex(new Vertex(new Vector2f(500, 300), Color.Blue), 10);
+            line3.AddVertex(new Vertex(new Vector2f(400, 300), Color.Blue), 10);
+            line3.AddVertex(new Vertex(new Vector2f(400, 200), Color.Blue), 10);
+            line3.AddVertex(new Vertex(new Vector2f(500, 200), Color.Blue), 10);
+
+
 
             while (window.IsOpen) {
                 window.DispatchEvents();
                 window.Clear(Color.Black);
 
-                window.Draw(line);
+                window.Draw(line1);
+                window.Draw(line2);
+                window.Draw(line3);
 
                 window.Display();
 
